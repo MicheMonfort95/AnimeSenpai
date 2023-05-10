@@ -1,0 +1,169 @@
+html body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: capitalize;
+  border: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: red;
+  background-image: url(./img/anime.jpg);
+  filter: drop-shadow(16px 16px 20px red);
+}
+
+div.container-fluid {
+  background-color: black;
+}
+
+.navbar-brand {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: red !important;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.search {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card .card-front,
+.card .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card .card-front {
+  z-index: 2;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .card-back {
+  transform: rotateY(180deg);
+  z-index: 1;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .card-back p {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card:hover .card-back p {
+  display: block;
+}
+
+.card .card-action {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.card:hover .card-action {
+  display: block;
+}
+
+.card:hover .card-front {
+  z-index: 1;
+}
+
+.card:hover .card-back {
+  z-index: 2;
+}
+
+.card:hover .card-back p {
+  display: none;
+}
+
+div.card {
+  width: 300px;
+  height: 400px;
+  padding: 10px;
+  background-color: #141414;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.card:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+.card .card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.card .card-content {
+  padding: 20px;
+  height: 200px;
+  overflow: hidden;
+  color: #fff;
+}
+
+.card .card-content .card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.card .card-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+div.card-action {
+  text-align: center;
+  padding: 10px;
+  background-color: #e50914;
+}
+
+div.card-action a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    width: calc((100% / 2) - 20px);
+  }
+}
